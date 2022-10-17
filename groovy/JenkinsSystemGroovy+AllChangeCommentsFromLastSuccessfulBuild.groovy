@@ -1,5 +1,7 @@
 import jenkins.model.Jenkins
 
+/// `Changes since last successful build` Required to install plugin
+/// https://plugins.jenkins.io/changes-since-last-success/
 def allChangeCommentsFromLastSuccessfulBuild() {
     def env = binding.build.environment
     def job = Jenkins.instance.getItem("${env.JOB_NAME}")
